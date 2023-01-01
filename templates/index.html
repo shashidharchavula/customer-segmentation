@@ -1,0 +1,38 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Segmentation Dashboard</title>
+    <!-- Load Plotly library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 20px; }
+      h1 { color: #333; }
+      .chart { margin-bottom: 50px; }
+    </style>
+</head>
+<body>
+    <h1>Customer Segmentation Dashboard</h1>
+    
+    <div class="chart">
+        <h2>Scatter Plot: Annual Income vs Spending Score</h2>
+        <div>{{ scatter_div|safe }}</div>
+    </div>
+    
+    <div class="chart">
+        <h2>Bar Chart: Number of Customers per Cluster</h2>
+        <div>{{ bar_div|safe }}</div>
+    </div>
+    
+    <div class="chart">
+        <h2>Histogram: Age Distribution by Cluster</h2>
+        <div>{{ hist_div|safe }}</div>
+    </div>
+    
+    <div class="chart">
+        <h2>Box Plot: Spending Score Distribution by Cluster</h2>
+        <div>{{ box_div|safe }}</div>
+    </div>
+</body>
+</html>
